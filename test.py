@@ -9,7 +9,7 @@ minAni = len(names.animals)-1
 
 class FlaskTests(unittest.TestCase):
 
-    def testExampleMOdel(self):
+    def testNames(self):
 
         return "%s%s" % (
             names.adjectives[random.randint(0, minAdj)],
