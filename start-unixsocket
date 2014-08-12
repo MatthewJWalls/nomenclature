@@ -1,0 +1,2 @@
+#!/bin/bash
+uwsgi -s /tmp/uwsgi.sock --module app --callable app --chmod-socket=666
