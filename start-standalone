@@ -1,3 +1,5 @@
 #!/bin/bash
+
+echo "My external IP is probably" $(ifconfig eth0 | egrep -o "inet addr:[^ ]+" | cut -d":" -f2)
 python app.py
 
