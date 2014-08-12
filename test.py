@@ -16,5 +16,18 @@ class FlaskTests(unittest.TestCase):
             names.animals[random.randint(0, minAni)]
         )
 
+    def testToFailure(self):
+        
+        names = []
+
+        while True:
+            name = self.testNames()
+            if name in names:
+                raise Exception("Failed after %s tries" % len(names))
+            else:
+                names.append(name)
+
+
+
 if __name__ == '__main__':
     unittest.main()
